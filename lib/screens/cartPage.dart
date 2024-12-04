@@ -8,6 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CartManager {
   static const _cartKey = 'cart';
 
+  static var cart;
+
   // Fetch the cart from SharedPreferences
   static Future<List<Product>> getCart() async {
     final prefs = await SharedPreferences.getInstance();
